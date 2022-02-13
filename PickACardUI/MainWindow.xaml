@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PickACardUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CardPicker" Height="300" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -20,6 +20,7 @@
             <Label Content="How many cards should I pick?" FontSize="20"/>
             <Slider x:Name="numberOfCards" Minimum="1" Maximum="15" Foreground="Black" IsSnapToTickEnabled="True" TickPlacement="BottomRight"/>
         </StackPanel>
-        <Button Content="Pick some cards" HorizontalAlignment="Center" Margin="0,109,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
+        <Button Content="Pick some cards" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="20" Click="Button_Click"/>
+        <ListBox x:Name="listOfCards" Grid.Column="1" FontSize="20" Margin="20,20,20,20" Grid.RowSpan="2"/>
     </Grid>
 </Window>
